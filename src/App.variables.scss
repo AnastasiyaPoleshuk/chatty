@@ -1,0 +1,31 @@
+$big-font: 100px;
+$section-title-font: 50px;
+$title-font: 33px;
+$text-font: 20px;
+$sub-title-font: 22px;
+$button-font: 24px;
+
+$bg-color: #f7f2f6;
+$main-color-blue: #1f69d7;
+$main-color-orange: #d7611f;
+$text-color: #212121;
+
+@mixin font {
+  font-family: $font-family;
+  font-size: $text-font;
+  font-weight: normal;
+  letter-spacing: 1;
+}
+
+@mixin h1 {
+  font-weight: 700;
+  font-size: 100px; //!-----------change to variables
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
+
+@mixin h2 {
+  font-size: $big-font * 1.5;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
