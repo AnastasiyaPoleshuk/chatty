@@ -1,0 +1,70 @@
+@import "../../App.variables.scss";
+
+.events__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: $section-margin;
+
+  .events__title {
+    @include h2;
+    color: $main-color-blue;
+  }
+
+  .events__sub-title {
+    margin-bottom: 24px;
+  }
+
+  .events__description {
+    margin-top: 18px;
+  }
+}
+
+.ant-picker-date-panel {
+  background: $bg-color;
+  border-radius: 20px;
+  border: 2px solid #1f69d7;
+}
+
+.ant-picker-body {
+  padding: 0 !important;
+}
+
+.ant-picker-calendar-header {
+  display: none !important;
+}
+
+.ant-picker-content thead {
+  border-bottom: 2px solid #1f69d7;
+}
+
+.ant-picker-content thead tr th {
+  text-align: center;
+  @include font;
+  font-weight: bold;
+  padding: 13px 0 !important;
+
+  &:not(:last-child) {
+    border-right: 1px solid #1f69d7;
+  }
+}
+
+.ant-picker-cell {
+  width: 137px;
+  height: 112px;
+  border-top: 1px solid #1f69d7;
+
+  &:not(:last-child) {
+    border-right: 1px solid #1f69d7;
+  }
+}
+
+.ant-picker-cell-selected {
+  color: $text-color !important;
+  background-color: $main-color-white !important;
+}
+
+.ant-picker-cell-inner {
+  background: transparent !important;
+}

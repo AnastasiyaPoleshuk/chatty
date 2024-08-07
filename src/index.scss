@@ -1,9 +1,24 @@
 @import "reset-css";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pinyon+Script&display=swap");
+@import "./App.variables.scss";
 
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $bg-color;
+  @include font;
+}
+
+[class*="__section"] {
+  position: relative;
+  width: 100%;
+  @include flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[class*="__container"] {
+  width: $main-width;
 }

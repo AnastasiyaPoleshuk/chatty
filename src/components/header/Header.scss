@@ -1,0 +1,27 @@
+@import "../../App.variables.scss";
+
+.header__container {
+  @include flex;
+  justify-content: flex-start;
+  gap: 250px;
+
+  .header__logo {
+    width: 200px;
+  }
+
+  .header__nav {
+    @include flex;
+    justify-content: center;
+    gap: 55px;
+  }
+
+  .nav-item {
+    text-decoration: none;
+    color: $text-color;
+    transition: 0.3s;
+
+    &:hover {
+      color: $main-color-blue;
+    }
+  }
+}

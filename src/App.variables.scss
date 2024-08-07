@@ -1,4 +1,4 @@
-$big-font: 100px;
+$big-font: 98px;
 $section-title-font: 50px;
 $title-font: 33px;
 $text-font: 20px;
@@ -8,24 +8,41 @@ $button-font: 24px;
 $bg-color: #f7f2f6;
 $main-color-blue: #1f69d7;
 $main-color-orange: #d7611f;
+$main-color-white: rgb(255, 255, 255);
 $text-color: #212121;
 
+$main-width: 1420px;
+$section-margin: 70px;
+
 @mixin font {
-  font-family: $font-family;
   font-size: $text-font;
-  font-weight: normal;
+  font-weight: 500;
   letter-spacing: 1;
 }
 
 @mixin h1 {
   font-weight: 700;
-  font-size: 100px; //!-----------change to variables
+  font-size: $big-font;
   line-height: 150%;
   letter-spacing: -0.01em;
 }
 
 @mixin h2 {
-  font-size: $big-font * 1.5;
-  font-weight: bold;
-  letter-spacing: -2px;
+  font-size: $section-title-font;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
+
+@mixin h3 {
+  font-weight: 700;
+  font-size: $title-font;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

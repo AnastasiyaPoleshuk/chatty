@@ -1,0 +1,72 @@
+@import "../../App.variables.scss";
+
+.welcome__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: $section-margin;
+
+  .welcome__description {
+    font-size: $button-font;
+  }
+
+  .welcome__title {
+    @include h1;
+    color: $main-color-blue;
+  }
+
+  .welcome__sub-title {
+    font-size: $button-font;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .welcome__button {
+    border: none;
+    border-radius: 45px;
+    background: $main-color-orange;
+    padding: 18px 10px 18px 25px;
+
+    & span {
+      color: $main-color-white;
+      font-size: $button-font;
+      margin-right: 15px;
+    }
+  }
+
+  .welcome-pic__box {
+    width: 100%;
+    @include flex;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: url(../../assets/svg/welcome-section-star-orange.svg);
+      top: -10%;
+      left: -2%;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      content: url(../../assets/svg/welcome-section-star-blue.svg);
+      top: -10%;
+      right: 2%;
+    }
+  }
+}
+
+.welcome__line {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/svg/welcome-section-line.svg);
+  background-size: 100% 586px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 25%;
+  z-index: -5;
+}
