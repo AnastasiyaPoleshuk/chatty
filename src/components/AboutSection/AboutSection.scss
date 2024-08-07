@@ -16,6 +16,32 @@
       background-image: url(../../assets/svg/calendar-section-rectangle.svg);
       background-repeat: no-repeat;
       background-size: 500px 500px;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        display: block;
+        content: "";
+        background-image: url(../../assets/svg/about-section-star-blue.svg);
+        background-size: contain;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -90px;
+        right: 25px;
+      }
+
+      &::before {
+        display: block;
+        content: "";
+        background-image: url(../../assets/svg/about-section-star-blue.svg);
+        background-size: contain;
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        bottom: -35px;
+        left: 40px;
+      }
 
       & .about__info-block__title {
         transform: rotate(-8deg);
@@ -37,8 +63,13 @@
         border: none;
         border-radius: 45px;
         background: $main-color-orange;
-        padding: 18px 10px 18px 25px;
+        padding: 10px 5px 10px 20px;
         margin: 0 auto;
+        transition: 0.3s;
+
+        &:hover {
+          box-shadow: 5px 2px 10px #00000040;
+        }
 
         & span {
           color: $main-color-white;
@@ -55,18 +86,44 @@
       background-repeat: no-repeat;
       background-size: 650px 650px;
       gap: 40px;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        display: block;
+        content: "";
+        background-image: url(../../assets/svg/about-section-star-orange-1.svg);
+        background-size: contain;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: -60px;
+        right: 110px;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        background-image: url(../../assets/svg/about-section-star-orange-2.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        bottom: -150px;
+        left: 100px;
+      }
 
       & .about__info-block__title {
         transform: rotate(8deg);
         @include h3;
         color: $main-color-white;
-        width: 80%;
         text-align: center;
       }
 
       & .about__info-text {
         transform: rotate(8deg);
-        width: 60%;
+        width: 58%;
 
         font-size: $sub-title-font;
         color: $main-color-white;
@@ -77,9 +134,14 @@
         transform: rotate(8deg);
         border: none;
         border-radius: 45px;
-        background: $main-color-blue;
-        padding: 18px 10px 18px 25px;
+        background: $main-color-green;
+        padding: 10px 5px 10px 20px;
         margin: 0 auto;
+        transition: 0.3s;
+
+        &:hover {
+          box-shadow: 5px 2px 10px #00000040;
+        }
 
         & span {
           color: $main-color-white;

@@ -1,13 +1,11 @@
 import "./Header.scss";
-import logo from "../../assets/png/logo.png";
+import logo from "../../assets/png/Chatty.png";
 import { CONSTANTS } from "../../utils/constants";
 
 export const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <img src={logo} alt="logo" className="header__logo" />
-
         <nav className="header__nav nav">
           <a
             href={`#${CONSTANTS.SECTIONS.EVENTS}`}
@@ -21,6 +19,7 @@ export const Header = () => {
           >
             This is us
           </a>
+          <img src={logo} alt="logo" className="header__logo" />
           <a
             href={`#${CONSTANTS.SECTIONS.TELEGRAM}`}
             className="telegram__nav-item nav-item"

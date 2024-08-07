@@ -36,6 +36,7 @@ export const EventsSection = () => {
           To sign up, click on the event card and fill in the form that opens
         </p>
       </div>
+      <i className="events__ribbons"></i>
     </section>
   );
 };

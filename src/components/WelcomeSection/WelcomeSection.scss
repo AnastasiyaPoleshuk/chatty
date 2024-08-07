@@ -8,26 +8,23 @@
   align-items: center;
   margin-top: $section-margin;
 
-  .welcome__description {
-    font-size: $button-font;
-  }
-
   .welcome__title {
     @include h1;
-    color: $main-color-blue;
+    color: $main-color-green;
   }
 
   .welcome__sub-title {
     font-size: $button-font;
     text-align: center;
+    margin-top: 12px;
     margin-bottom: 50px;
   }
 
   .welcome__button {
     border: none;
     border-radius: 45px;
-    background: $main-color-orange;
-    padding: 18px 10px 18px 25px;
+    background: $main-color-purple;
+    padding: 10px 5px 10px 20px;
 
     & span {
       color: $main-color-white;
@@ -40,6 +37,7 @@
     width: 100%;
     @include flex;
     position: relative;
+    margin-top: 40px;
 
     &::after {
       display: block;
@@ -53,8 +51,8 @@
       display: block;
       position: absolute;
       content: url(../../assets/svg/welcome-section-star-blue.svg);
-      top: -10%;
-      right: 2%;
+      bottom: 0;
+      right: -3%;
     }
   }
 }

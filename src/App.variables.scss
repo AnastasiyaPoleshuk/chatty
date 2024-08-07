@@ -7,12 +7,15 @@ $button-font: 24px;
 
 $bg-color: #f7f2f6;
 $main-color-blue: #1f69d7;
+$main-color-green: #41b30a;
+$main-color-purple: #d738ff;
+$title-color-purple: #6a0dad;
 $main-color-orange: #d7611f;
 $main-color-white: rgb(255, 255, 255);
 $text-color: #212121;
 
 $main-width: 1420px;
-$section-margin: 70px;
+$section-margin: 100px;
 
 @mixin font {
   font-size: $text-font;
@@ -23,7 +26,7 @@ $section-margin: 70px;
 @mixin h1 {
   font-weight: 700;
   font-size: $big-font;
-  line-height: 150%;
+  line-height: 100%;
   letter-spacing: -0.01em;
 }
 

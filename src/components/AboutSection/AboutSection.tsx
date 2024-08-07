@@ -17,7 +17,7 @@ export const AboutSection = () => {
               style={{
                 color: "#d7611f",
                 background: "#fff",
-                padding: 15,
+                padding: 10,
                 borderRadius: "50%",
               }}
             />
@@ -25,7 +25,7 @@ export const AboutSection = () => {
         </div>
         <div className="about__info-block">
           <h3 className="about__info-block__title">
-            Would you like to join Chatty project team?
+            Would you like to join Chatty <br /> project team?
           </h3>
           <p className="about__info-text">
             We are looking for a contect creator, a video-maker, and a project
@@ -35,9 +35,9 @@ export const AboutSection = () => {
             <span>Investigate the opportunity</span>
             <ArrowDownOutlined
               style={{
-                color: "#1f69d7",
+                color: "#41b30a",
                 background: "#fff",
-                padding: 15,
+                padding: 10,
                 borderRadius: "50%",
               }}
             />

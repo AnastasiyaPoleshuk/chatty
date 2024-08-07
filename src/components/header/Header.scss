@@ -2,11 +2,13 @@
 
 .header__container {
   @include flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 250px;
+  margin-top: 60px;
 
   .header__logo {
     width: 200px;
+    margin: 0 70px;
   }
 
   .header__nav {
@@ -21,7 +23,7 @@
     transition: 0.3s;
 
     &:hover {
-      color: $main-color-blue;
+      color: $main-color-green;
     }
   }
 }

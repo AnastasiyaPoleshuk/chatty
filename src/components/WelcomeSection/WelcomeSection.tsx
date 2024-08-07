@@ -11,21 +11,18 @@ export const WelcomeSection = () => {
   return (
     <section className="welcome__section">
       <div className="welcome__container">
-        <p className="welcome__description">
-          Community where you boost your English speaking skills
-        </p>
         <h1 className="welcome__title">English speaking club in Gomel</h1>
         <p className="welcome__sub-title">
-          Being fluent in English isn't a hard nut to crack <br /> any more.
+          Being fluent in English isn't a hard nut to crack any more.
         </p>
         {/* <a href={CONSTANTS.SECTIONS.EVENTS} className="welcome__button"> */}
         <button className="welcome__button">
           <span>Explore events</span>
           <ArrowDownOutlined
             style={{
-              color: "#d7611f",
+              color: "#d738ff",
               background: "#fff",
-              padding: 15,
+              padding: 10,
               borderRadius: "50%",
             }}
           />
