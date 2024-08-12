@@ -1,0 +1,75 @@
+@import "../../App.variables.scss";
+
+.statistics__container {
+  @include flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: $section-margin;
+
+  .statistics__title {
+    @include h2;
+    color: $title-color-purple;
+  }
+
+  .statistics__wrapp {
+    width: 100%;
+    margin-top: 25px;
+    @include flex;
+    justify-content: center;
+    gap: 280px;
+  }
+
+  .statistics__item {
+    position: relative;
+    &:nth-child(1) .statistics__item-info {
+      color: $main-color-purple;
+
+      &::after {
+        display: block;
+        content: url(../../assets/svg/statistics-section-star-perple.svg);
+        color: $main-color-purple;
+        position: absolute;
+        z-index: -2;
+        top: -112%;
+        left: -95%;
+      }
+    }
+
+    &:nth-child(2) .statistics__item-info {
+      color: $main-color-green;
+
+      &::after {
+        display: block;
+        content: url(../../assets/svg/statistics-section-star-green.svg);
+        position: absolute;
+        z-index: -2;
+        top: -100%;
+        left: -35%;
+      }
+    }
+
+    &:nth-child(3) .statistics__item-info {
+      color: $main-color-orange;
+
+      &::after {
+        display: block;
+        content: url(../../assets/svg/statistics-section-rectangle.svg);
+        position: absolute;
+        z-index: -2;
+        top: -65%;
+        left: 0;
+      }
+    }
+  }
+
+  .statistics__item-title {
+    font-size: $title-font;
+    margin-bottom: 130px;
+  }
+
+  .statistics__item-info {
+    @include h1;
+    position: relative;
+    text-align: center;
+  }
+}
