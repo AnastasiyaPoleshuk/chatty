@@ -1,0 +1,15 @@
+@import "../../App.variables.scss";
+
+.thisIsUs {
+  margin-top: $section-margin;
+  flex: 1;
+
+  .btn {
+    text-decoration: none;
+    color: $main-color-green;
+    font-size: $title-font;
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+  }
+}
