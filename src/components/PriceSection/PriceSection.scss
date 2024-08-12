@@ -1,0 +1,42 @@
+@import "../../App.variables.scss";
+
+.price__section {
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: url(../../assets/svg/price-section-star-filled.svg);
+    position: absolute;
+    left: -80px;
+    bottom: -180px;
+    z-index: -5;
+  }
+
+  &::after {
+    display: block;
+    content: url(../../assets/svg/price-section-star-outlined.svg);
+    position: absolute;
+    right: 0;
+    top: 15%;
+    z-index: -5;
+  }
+}
+
+.prise__container {
+  margin-top: $section-margin;
+  margin-bottom: $section-margin;
+
+  .price__title {
+    @include h2;
+    color: $main-color-green;
+    width: 100%;
+    text-align: center;
+  }
+
+  .price__cards-box {
+    margin-top: 80px;
+    @include flex;
+    justify-content: center;
+    gap: 20px;
+  }
+}

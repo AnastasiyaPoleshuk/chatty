@@ -1,0 +1,67 @@
+@import "../../App.variables.scss";
+
+.card {
+  width: 350px;
+  @include flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 20px;
+  padding: 45px 50px;
+
+  &:nth-child(2n + 1) {
+    background-color: $main-color-white;
+    border: 2px solid $main-color-purple;
+
+    & .card__btn {
+      border: 2px solid $main-color-green;
+      color: $main-color-green;
+    }
+  }
+
+  &:nth-child(2n) {
+    background-color: $main-color-green;
+    border: 2px solid $main-color-green;
+    padding: 105px 50px;
+    color: $main-color-white;
+
+    & .card__btn {
+      border: 2px solid $main-color-purple;
+      color: $main-color-purple;
+    }
+  }
+
+  .card__title {
+    @include h3;
+    margin-bottom: 18px;
+  }
+
+  .card__info {
+    font-size: $small-font;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .card__info-duration,
+  .card__info-cost {
+    font-size: $button-font;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  .card__info-duration {
+    margin-bottom: 20px;
+  }
+
+  .card__info-cost {
+    margin-bottom: 30px;
+  }
+
+  .card__btn {
+    background-color: $main-color-white;
+    font-size: $button-font;
+    border-radius: 36px;
+    padding: 18px 34px;
+  }
+}

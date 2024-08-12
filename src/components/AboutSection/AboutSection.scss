@@ -2,7 +2,7 @@
 
 .about__container {
   @include flex;
-  margin-top: 125px;
+  margin-top: calc($section-margin * 2);
 
   .about__info-block {
     @include flex;
