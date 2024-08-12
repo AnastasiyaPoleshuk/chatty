@@ -25,7 +25,7 @@ export const TelegramSection = () => {
           </p>
         </div>
 
-        <button className="welcome__button">
+        <a href="https://t.me/+Goey5vs-Qgc5MDgy" className="telegram__button">
           <span>Explore events</span>
           <ArrowRightOutlined
             style={{
@@ -35,7 +35,7 @@ export const TelegramSection = () => {
               borderRadius: "50%",
             }}
           />
-        </button>
+        </a>
       </div>
     </section>
   );

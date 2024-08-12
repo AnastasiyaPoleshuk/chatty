@@ -1,6 +1,7 @@
 import "./Header.scss";
 import logo from "../../assets/png/Chatty.png";
 import { CONSTANTS } from "../../utils/constants";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -13,18 +14,17 @@ export const Header = () => {
           >
             Events
           </a>
-          <a
-            href={`#${CONSTANTS.SECTIONS.ABOUT}`}
-            className="about__nav-item nav-item"
-          >
+          <NavLink className="about__nav-item nav-item" to={"/this-is-us"}>
             This is us
-          </a>
-          <img src={logo} alt="logo" className="header__logo" />
+          </NavLink>
+          <NavLink to={"/"}>
+            <img src={logo} alt="logo" className="header__logo" />
+          </NavLink>
           <a
-            href={`#${CONSTANTS.SECTIONS.TELEGRAM}`}
+            href="https://www.instagram.com/english_club_gomel/"
             className="telegram__nav-item nav-item"
           >
-            Telegram
+            Instagram
           </a>
           <a
             href={`#${CONSTANTS.SECTIONS.PRICE}`}

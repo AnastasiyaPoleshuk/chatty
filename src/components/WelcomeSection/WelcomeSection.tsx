@@ -15,8 +15,7 @@ export const WelcomeSection = () => {
         <p className="welcome__sub-title">
           Being fluent in English isn't a hard nut to crack any more.
         </p>
-        {/* <a href={CONSTANTS.SECTIONS.EVENTS} className="welcome__button"> */}
-        <button className="welcome__button">
+        <a href={`#${CONSTANTS.SECTIONS.EVENTS}`} className="welcome__button">
           <span>Explore events</span>
           <ArrowDownOutlined
             style={{
@@ -26,7 +25,7 @@ export const WelcomeSection = () => {
               borderRadius: "50%",
             }}
           />
-        </button>
+        </a>
         <div className="welcome-pic__box">
           <img src={picOne} alt="welcome pic" className="welcome-pic__item" />
           <img src={picTwo} alt="welcome pic" className="welcome-pic__item" />

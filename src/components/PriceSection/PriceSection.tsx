@@ -1,10 +1,12 @@
 import { PriceCard } from "../PriceCard/PriceCard";
 import { PriceCardInfo } from "../../utils/PriceCardInfo";
+import { CONSTANTS } from "../../utils/constants";
+
 import "./PriceSection.scss";
 
 export const PriceSection = () => {
   return (
-    <section className="price__section">
+    <section className="price__section" id={CONSTANTS.SECTIONS.PRICE}>
       <div className="prise__container">
         <h2 className="price__title">Pricing</h2>
 

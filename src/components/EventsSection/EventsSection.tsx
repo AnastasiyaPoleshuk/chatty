@@ -1,5 +1,6 @@
 import { Calendar } from "antd";
 import locale from "antd/es/locale/en_US";
+import { CONSTANTS } from "../../utils/constants";
 
 import "./EventsSection.scss";
 
@@ -20,7 +21,7 @@ const calendarLocale = {
 
 export const EventsSection = () => {
   return (
-    <section className="events__section">
+    <section className="events__section" id={CONSTANTS.SECTIONS.EVENTS}>
       <div className="events__container">
         <h2 className="events__title">Upcoming events in September</h2>
         <p className="events__sub-title">
