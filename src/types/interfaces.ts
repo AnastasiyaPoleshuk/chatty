@@ -5,3 +5,10 @@ export interface IPriceCardInfo {
   duration: number;
   cost: number;
 }
+
+export interface ICalendarInfo {
+  id: string;
+  name: string;
+  date: string;
+  color: string;
+}
