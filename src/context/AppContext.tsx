@@ -7,6 +7,7 @@ interface IAppContext {
   calendarModal: boolean;
   cardsModal: boolean;
   signUpModal: boolean;
+  joinTeamModal: boolean;
   eventData: ICalendarInfo;
   openModal: (type: string) => void;
   closeModal: (type: string) => void;
@@ -17,6 +18,7 @@ export const AppContext = createContext<IAppContext>({
   calendarModal: false,
   cardsModal: false,
   signUpModal: false,
+  joinTeamModal: false,
   eventData: {
     id: "",
     name: "",
@@ -32,6 +34,7 @@ export const AppState = ({ children }: { children: React.ReactNode }) => {
   const [calendarModal, setCalendarModal] = useState(false);
   const [cardsModal, setCardsModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const [joinTeamModal, setJoinTeamModal] = useState(false);
   const [eventData, setEventData] = useState({
     id: "",
     name: "",
@@ -40,8 +43,6 @@ export const AppState = ({ children }: { children: React.ReactNode }) => {
   });
 
   const openModal = (type: string) => {
-    window.scrollTo({ top: 0 });
-
     switch (type) {
       case CONSTANTS.MODALS.CALENDAR__MODAL:
         setCalendarModal(true);
@@ -51,6 +52,9 @@ export const AppState = ({ children }: { children: React.ReactNode }) => {
         break;
       case CONSTANTS.MODALS.SIGN_UP__MODAL:
         setSignUpModal(true);
+        break;
+      case CONSTANTS.MODALS.JOIN_TEAM__MODAL:
+        setJoinTeamModal(true);
         break;
       default:
         break;
@@ -68,6 +72,9 @@ export const AppState = ({ children }: { children: React.ReactNode }) => {
       case CONSTANTS.MODALS.SIGN_UP__MODAL:
         setSignUpModal(false);
         break;
+      case CONSTANTS.MODALS.JOIN_TEAM__MODAL:
+        setJoinTeamModal(false);
+        break;
       default:
         break;
     }
@@ -82,12 +89,13 @@ export const AppState = ({ children }: { children: React.ReactNode }) => {
       calendarModal,
       cardsModal,
       signUpModal,
+      joinTeamModal,
       eventData,
       openModal,
       closeModal,
       saveEventData,
     }),
-    [calendarModal, cardsModal, signUpModal, eventData],
+    [calendarModal, cardsModal, signUpModal, joinTeamModal, eventData],
   );
   return (
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>

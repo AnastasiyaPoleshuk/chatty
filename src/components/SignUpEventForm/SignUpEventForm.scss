@@ -1,0 +1,7 @@
+@import "../../App.variables.scss";
+
+.sign-up__form {
+  @include flex;
+  flex-direction: column;
+  gap: 20px;
+}

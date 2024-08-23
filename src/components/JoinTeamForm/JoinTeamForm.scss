@@ -1,0 +1,7 @@
+@import "../../App.variables.scss";
+
+.join-team__form {
+  @include flex;
+  flex-direction: column;
+  gap: 20px;
+}

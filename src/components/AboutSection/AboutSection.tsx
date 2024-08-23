@@ -1,8 +1,13 @@
 import { ArrowDownOutlined } from "@ant-design/icons";
 
 import "./AboutSection.scss";
+import { useContext } from "react";
+import { AppContext } from "src/context/AppContext";
+import { CONSTANTS } from "../../utils/constants";
 
 export const AboutSection = () => {
+  const { openModal } = useContext(AppContext);
+
   return (
     <section className="about__section">
       <div className="about__container">
@@ -11,7 +16,10 @@ export const AboutSection = () => {
             What do you need to participate in our events?
           </h3>
           <p className="about__info-text">A2 level and be willing to speak </p>
-          <button className="about__info-button">
+          <button
+            className="about__info-button"
+            onClick={() => openModal(CONSTANTS.MODALS.SIGN_UP__MODAL)}
+          >
             <span>Sign up for an event</span>
             <ArrowDownOutlined
               style={{
@@ -31,7 +39,10 @@ export const AboutSection = () => {
             We are looking for a contect creator, a video-maker, and a project
             manager to coordinate offline clubs in other cities
           </p>
-          <button className="about__info-button">
+          <button
+            className="about__info-button"
+            onClick={() => openModal(CONSTANTS.MODALS.JOIN_TEAM__MODAL)}
+          >
             <span>Investigate the opportunity</span>
             <ArrowDownOutlined
               style={{

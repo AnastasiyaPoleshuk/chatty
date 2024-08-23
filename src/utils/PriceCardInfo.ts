@@ -11,7 +11,7 @@ export const PriceCardInfo: IPriceCardInfo[] = [
   },
   {
     id: "parties",
-    title: "English parties",
+    title: "English party",
     description:
       "The calendar is full of amazing events. Let's celebrate them together, having fun and drilling English!",
     duration: 2.5,
