@@ -31,6 +31,7 @@ export const SignUpEventForm = () => {
   const { closeModal } = useContext(AppContext);
   const [currentEventName, setCurrentEventName] = useState("");
   const [currentEventDate, setCurrentEventDate] = useState("");
+  const [isError, setIsError] = useState(true);
   const {
     register,
     handleSubmit,
@@ -42,7 +43,9 @@ export const SignUpEventForm = () => {
     const currentEvent = getUpcomingEvent(calendarInfo, PriceCardInfo[0].title);
 
     if (currentEvent) {
-      setCurrentEventDate(dayjs(currentEvent.date).format("DD-MM-YYYY"));
+      setCurrentEventDate(
+        dayjs(currentEvent.date).format(CONSTANTS.CALENDAR_FORMAT),
+      );
     } else {
       setCurrentEventDate("");
     }
@@ -52,10 +55,14 @@ export const SignUpEventForm = () => {
     const currentEvent = getUpcomingEvent(calendarInfo, currentEventName);
 
     if (currentEvent) {
-      setCurrentEventDate(dayjs(currentEvent.date).format("DD-MM-YYYY"));
+      setCurrentEventDate(
+        dayjs(currentEvent.date).format(CONSTANTS.CALENDAR_FORMAT),
+      );
+      setIsError(false);
     } else {
       setCurrentEventDate("");
       currentEventName.length && error(CONSTANTS.MESSAGES.SIGN_UP_FAIL);
+      currentEventName.length && setIsError(true);
     }
   }, [currentEventName]);
 
@@ -77,7 +84,7 @@ export const SignUpEventForm = () => {
     }
 
     const result = await axios.post(
-      `${CONSTANTS.TG_REQUEST_URL}&text=Event: ${data.eventName}%0ADate: ${dayjs(upcomingEvent.date).format("DD-MM-YYYY")}%0AName: ${data.name}%0APhone: ${data.phone}`,
+      `${CONSTANTS.TG_REQUEST_URL}&text=Event: ${data.eventName}%0ADate: ${dayjs(upcomingEvent.date).format(CONSTANTS.CALENDAR_FORMAT)}%0AName: ${data.name}%0APhone: ${data.phone}`,
     );
 
     if (result.status === StatusCodes.OK) {
@@ -107,14 +114,17 @@ export const SignUpEventForm = () => {
         name="eventName"
         render={({ field: { onChange } }) => (
           <Select
-            defaultValue={PriceCardInfo[0].title}
+            // defaultValue={PriceCardInfo[0].title}
+            defaultValue="Choose the event"
             onChange={(currentEvent) => changeEvent(onChange, currentEvent)}
             options={getOptions()}
           />
         )}
       />
       {currentEventDate && <p>{`Date: ${currentEventDate}`}</p>}
-      <input type="submit" />
+      <button type="submit" disabled={isError}>
+        Submit
+      </button>
     </form>
   );
 };

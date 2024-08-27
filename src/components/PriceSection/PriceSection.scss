@@ -5,11 +5,21 @@
 
   &::before {
     display: block;
-    content: url(../../assets/svg/price-section-star-filled.svg);
+    width: 722px;
+    height: 735px;
+    content: "";
+    background-image: url(../../assets/svg/price-section-star-filled.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     left: -80px;
     bottom: -180px;
     z-index: -5;
+
+    @media (max-width: 1200px) {
+      width: 622px;
+      height: 635px;
+    }
   }
 
   &::after {
@@ -38,5 +48,9 @@
     @include flex;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: 1200px) {
+      margin-top: 50px;
+    }
   }
 }

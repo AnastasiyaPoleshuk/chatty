@@ -13,6 +13,12 @@
     left: 0;
     top: 22%;
     z-index: -2;
+
+    @media (max-width: 1200px) {
+      width: 500px;
+      height: 800px;
+      opacity: 0.5;
+    }
   }
 
   &::after {
@@ -28,6 +34,12 @@
     right: 0;
     top: 25%;
     z-index: -2;
+
+    @media (max-width: 1200px) {
+      width: 370px;
+      height: 580px;
+      opacity: 0.5;
+    }
   }
 }
 
@@ -42,10 +54,7 @@
   .telegram__title {
     @include h2;
     color: $main-color-green;
-    // margin-bottom: 16px;
-  }
-
-  .telegram__sub-title {
+    text-align: center;
   }
 
   .telegram__chat-box {
@@ -67,11 +76,11 @@
     }
 
     &:nth-child(2n) {
-      justify-self: flex-start;
+      align-self: flex-end;
     }
 
     &:nth-child(2n + 1) {
-      justify-self: flex-end;
+      align-self: flex-start;
     }
 
     &:nth-child(1) {
@@ -114,6 +123,7 @@
 
     &:hover {
       box-shadow: 5px 2px 10px #00000040;
+      cursor: pointer;
     }
 
     & span {

@@ -1,1 +1,7 @@
 @import "../../App.variables.scss";
+
+.calendar__form {
+  @include flex;
+  flex-direction: column;
+  gap: 20px;
+}

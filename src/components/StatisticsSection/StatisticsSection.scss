@@ -9,6 +9,7 @@
   .statistics__title {
     @include h2;
     color: $title-color-purple;
+    text-align: center;
   }
 
   .statistics__wrapp {
@@ -17,6 +18,10 @@
     @include flex;
     justify-content: center;
     gap: 280px;
+
+    @media (max-width: 1200px) {
+      gap: 180px;
+    }
   }
 
   .statistics__item {
@@ -32,6 +37,11 @@
         z-index: -2;
         top: -112%;
         left: -95%;
+
+        @media (max-width: 1200px) {
+          top: -150%;
+          left: -115%;
+        }
       }
     }
 
@@ -45,6 +55,10 @@
         z-index: -2;
         top: -100%;
         left: -35%;
+
+        @media (max-width: 1200px) {
+          top: -145%;
+        }
       }
     }
 
@@ -58,6 +72,10 @@
         z-index: -2;
         top: -65%;
         left: 0;
+
+        @media (max-width: 1200px) {
+          top: -95%;
+        }
       }
     }
   }
@@ -65,11 +83,20 @@
   .statistics__item-title {
     font-size: $title-font;
     margin-bottom: 130px;
+
+    @media (max-width: 1200px) {
+      text-align: center;
+    }
   }
 
   .statistics__item-info {
     @include h1;
     position: relative;
     text-align: center;
+
+    @media (max-width: 1200px) {
+      @include h1;
+      font-size: 80px;
+    }
   }
 }

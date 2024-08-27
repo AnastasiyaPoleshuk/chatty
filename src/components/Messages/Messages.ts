@@ -3,7 +3,7 @@ import { message } from "antd";
 export const success = (text: string) => {
   message.success({
     content: text,
-    duration: 1,
+    duration: 1.5,
     style: {
       marginTop: "15vh",
     },
@@ -13,7 +13,7 @@ export const success = (text: string) => {
 export const error = (text: string) => {
   message.error({
     content: text,
-    duration: 2,
+    duration: 2.5,
     style: {
       marginTop: "15vh",
     },
@@ -23,7 +23,7 @@ export const error = (text: string) => {
 export const warning = (text: string) => {
   return message.warning({
     content: text,
-    duration: 1,
+    duration: 1.5,
     style: {
       marginTop: "15vh",
     },

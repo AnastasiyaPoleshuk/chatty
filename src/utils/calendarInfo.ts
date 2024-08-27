@@ -4,7 +4,7 @@ export const calendarInfo: ICalendarInfo[] = [
   {
     id: "0",
     name: "Board games",
-    date: "2024-08-02",
+    date: "2024-09-02",
     color: "rgba(145, 31, 215, 0.1)",
   },
   {
@@ -16,13 +16,13 @@ export const calendarInfo: ICalendarInfo[] = [
   {
     id: "2",
     name: "English Party",
-    date: "2024-08-18",
+    date: "2024-08-31",
     color: "rgba(31, 215, 138, 0.1)",
   },
   {
     id: "3",
     name: "Board games",
-    date: "2024-08-14",
+    date: "2024-08-29",
     color: "rgba(145, 31, 215, 0.1)",
   },
   {
@@ -34,7 +34,7 @@ export const calendarInfo: ICalendarInfo[] = [
   {
     id: "5",
     name: "English Party",
-    date: "2024-08-08",
+    date: "2024-09-08",
     color: "rgba(31, 215, 138, 0.1)",
   },
   {

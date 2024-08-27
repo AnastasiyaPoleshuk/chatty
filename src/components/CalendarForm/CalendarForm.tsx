@@ -25,7 +25,7 @@ export const CalendarForm = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const result = await axios.post(
-      `${CONSTANTS.TG_REQUEST_URL}&text=Event: ${eventData.name}%0ADate: ${dayjs(eventData.date).format("DD-MM-YYYY")}%0A Name: ${data.name}%0APhone: ${data.phone}`,
+      `${CONSTANTS.TG_REQUEST_URL}&text=Event: ${eventData.name}%0ADate: ${dayjs(eventData.date).format(CONSTANTS.CALENDAR_FORMAT)}%0A Name: ${data.name}%0APhone: ${data.phone}`,
     );
 
     if (result.status === StatusCodes.OK) {
@@ -74,7 +74,7 @@ export const CalendarForm = () => {
 
       {errors.phone && <span>This field is required</span>}
 
-      <input type="submit" />
+      <button type="submit">Submit</button>
     </form>
   );
 };

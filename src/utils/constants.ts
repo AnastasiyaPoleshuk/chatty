@@ -21,4 +21,5 @@ export const CONSTANTS = {
     CALENDAR_FORM_FAIL: "Something went wrong :(",
     SIGN_UP_FAIL: "There are no such events in this month :(",
   },
+  CALENDAR_FORMAT: "DD.MM.YYYY",
 };

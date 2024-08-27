@@ -24,7 +24,7 @@ export const CardForm = () => {
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const result = await axios.post(
-      `${CONSTANTS.TG_REQUEST_URL}&text=Event: ${eventData.name}%0ADate: ${dayjs(eventData.date).format("DD-MM-YYYY")}%0AName: ${data.name}%0APhone: ${data.phone}`,
+      `${CONSTANTS.TG_REQUEST_URL}&text=Event: ${eventData.name}%0ADate: ${dayjs(eventData.date).format(CONSTANTS.CALENDAR_FORMAT)}%0AName: ${data.name}%0APhone: ${data.phone}`,
     );
 
     if (result.status === StatusCodes.OK) {

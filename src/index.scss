@@ -11,6 +11,10 @@ body {
   @include font;
 }
 
+#root {
+  overflow: hidden;
+}
+
 [class*="__section"] {
   position: relative;
   width: 100%;
@@ -21,4 +25,12 @@ body {
 
 [class*="__container"] {
   width: $main-width;
+
+  @media (max-width: 1440px) {
+    width: 1200px;
+  }
+
+  @media (max-width: 1200px) {
+    width: 1000px;
+  }
 }
