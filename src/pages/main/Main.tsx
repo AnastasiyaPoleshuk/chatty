@@ -36,6 +36,7 @@ export const Main = () => {
         open={calendarModal}
         footer={null}
         closable={false}
+        className="modal-window"
         onCancel={() => {
           closeModal(CONSTANTS.MODALS.CALENDAR__MODAL);
         }}
@@ -47,6 +48,7 @@ export const Main = () => {
         open={signUpModal}
         footer={null}
         closable={false}
+        className="modal-window"
         onCancel={() => {
           closeModal(CONSTANTS.MODALS.SIGN_UP__MODAL);
         }}
@@ -58,6 +60,7 @@ export const Main = () => {
         open={joinTeamModal}
         footer={null}
         closable={false}
+        className="modal-window"
         onCancel={() => {
           closeModal(CONSTANTS.MODALS.JOIN_TEAM__MODAL);
         }}
@@ -69,6 +72,7 @@ export const Main = () => {
         open={cardsModal}
         footer={null}
         closable={false}
+        className="modal-window"
         onCancel={() => {
           closeModal(CONSTANTS.MODALS.CARDS__MODAL);
         }}

@@ -1,16 +1,19 @@
-import { error, success } from "../../components/Messages/Messages";
-import { CONSTANTS } from "../../utils/constants";
-import { AppContext } from "../../context/AppContext";
+import { ArrowDownOutlined } from "@ant-design/icons";
+import { Select } from "antd";
 import axios from "axios";
 import dayjs from "dayjs";
 import { StatusCodes } from "http-status-codes";
 import { useContext, useEffect, useState } from "react";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
-import "./SignUpEventForm.scss";
-import { Select } from "antd";
+
+import { error, success } from "../../components/Messages/Messages";
+import { CONSTANTS } from "../../utils/constants";
+import { AppContext } from "../../context/AppContext";
 import { PriceCardInfo } from "../../utils/PriceCardInfo";
 import { getUpcomingEvent } from "../../utils/getUpcomingEvent";
 import { calendarInfo } from "../../utils/calendarInfo";
+
+import "./SignUpEventForm.scss";
 
 type Inputs = {
   name: string;
@@ -98,32 +101,60 @@ export const SignUpEventForm = () => {
 
   return (
     <form className="sign-up__form" onSubmit={handleSubmit(onSubmit)}>
-      <input
-        placeholder="Your name"
-        {...register("name", { required: true })}
-      />
-      {errors.name && <span>This field is required</span>}
+      <h2 className="form__title">Sign up for an event</h2>
+      <div className="input__block">
+        <input
+          placeholder="Name"
+          {...register("name", { required: true })}
+          className={`sign-up__input name ${errors.name ? "error__input" : ""}`}
+        />
+        {errors.name && (
+          <span className="error__text">This field is required</span>
+        )}
+      </div>
 
-      <input
-        placeholder="Your phone"
-        {...register("phone", { required: true })}
-      />
-      {errors.phone && <span>This field is required</span>}
+      <div className="input__block">
+        <input
+          placeholder="Phone"
+          {...register("phone", { required: true })}
+          className={`sign-up__input phone ${errors.phone ? "error__input" : ""}`}
+        />
+        {errors.phone && <span>This field is required</span>}
+      </div>
+
       <Controller
         control={control}
         name="eventName"
         render={({ field: { onChange } }) => (
           <Select
-            // defaultValue={PriceCardInfo[0].title}
-            defaultValue="Choose the event"
+            defaultValue="Desired event"
             onChange={(currentEvent) => changeEvent(onChange, currentEvent)}
             options={getOptions()}
+            style={{
+              border: "2px solid rgba(33, 33, 33, 0.5)",
+              padding: "10px 16px",
+              borderRadius: 10,
+              width: "100%",
+              background: "#fff",
+            }}
           />
         )}
       />
       {currentEventDate && <p>{`Date: ${currentEventDate}`}</p>}
-      <button type="submit" disabled={isError}>
-        Submit
+      <button
+        type="submit"
+        disabled={isError}
+        className={`sign-up__submit btn ${isError ? "disabled__btn" : ""}`}
+      >
+        <span>Submit</span>
+        <ArrowDownOutlined
+          style={{
+            color: "#d7611f",
+            background: "#fff",
+            padding: 10,
+            borderRadius: "50%",
+          }}
+        />
       </button>
     </form>
   );

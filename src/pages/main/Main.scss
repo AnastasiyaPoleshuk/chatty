@@ -1,1 +1,46 @@
 @import "../../App.variables.scss";
+
+.modal-window {
+  background-color: $main-color-gray;
+  border-radius: 20px;
+  border: 1px solid $main-color-purple;
+  @include flex;
+  width: 950px !important;
+  padding: 65px 0 !important;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    width: 260px;
+    height: 260px;
+    content: "";
+    background-image: url(../../assets/svg/modal-window-star-green-filled.svg);
+    background-repeat: no-repeat;
+    background-size: 260px 260px;
+
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+  }
+
+  &::after {
+    display: block;
+    width: 400px;
+    height: 400px;
+    content: "";
+    background-image: url(../../assets/svg/modal-window-star-perple-filled.svg);
+    background-repeat: no-repeat;
+    background-size: 400px 400px;
+
+    position: absolute;
+    left: -207px;
+    top: -65px;
+  }
+}
+
+.ant-modal-content {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
