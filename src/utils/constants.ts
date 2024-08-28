@@ -20,6 +20,7 @@ export const CONSTANTS = {
     CALENDAR_FORM_SUCCESS: "your message has been sent successfully",
     CALENDAR_FORM_FAIL: "Something went wrong :(",
     SIGN_UP_FAIL: "There are no such events in this month :(",
+    OPEN_PRICE_MODAL_FAIL: "There are no such events now :(",
   },
   CALENDAR_FORMAT: "DD.MM.YYYY",
 };

@@ -3,7 +3,7 @@ import axios from "axios";
 import dayjs from "dayjs";
 import { useForm, SubmitHandler } from "react-hook-form";
 import StatusCodes from "http-status-codes";
-// import MaskedInput from "react-text-mask";
+import { ArrowDownOutlined } from "@ant-design/icons";
 import { AppContext } from "../../context/AppContext";
 import { CONSTANTS } from "../../utils/constants";
 import { error, success } from "../Messages/Messages";
@@ -39,42 +39,42 @@ export const CalendarForm = () => {
 
   return (
     <form className="calendar__form" onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name", { required: true })} />
-      {errors.name && <span>This field is required</span>}
+      <h2 className="form__title">{eventData.name}</h2>
 
-      <input {...register("phone", { required: true })} />
-      {/* <MaskedInput
-        className={`form__input ${errors.phone ? "input-error" : null}`}
-        name="phone"
-        placeholderChar="x"
-        mask={[
-          "+",
-          "3",
-          "7",
-          "5",
-          " ",
-          "(",
-          /[1-9]/,
-          /\d/,
-          ")",
-          " ",
-          /\d/,
-          /\d/,
-          /\d/,
-          "-",
-          /\d/,
-          /\d/,
-          "-",
-          /\d/,
-          /\d/,
-        ]}
-        type="tel"
-        showMask={true}
-      /> */}
+      <div className="input__block">
+        <input
+          {...register("name", { required: true })}
+          className={`calendar__input name ${errors.name ? "error__input" : ""}`}
+        />
+        {errors.name && (
+          <span className="error__text">This field is required</span>
+        )}
+      </div>
 
-      {errors.phone && <span>This field is required</span>}
-
-      <button type="submit">Submit</button>
+      <div className="input__block">
+        <input
+          {...register("phone", { required: true })}
+          className={`calendar__input phone ${errors.phone ? "error__input" : ""}`}
+        />
+        {errors.phone && (
+          <span className="error__text">This field is required</span>
+        )}
+      </div>
+      <button
+        type="submit"
+        disabled={errors.name && errors.phone && false}
+        className={`calendar__submit btn ${errors.name && errors.phone ? "disabled__btn" : ""}`}
+      >
+        <span>Submit</span>
+        <ArrowDownOutlined
+          style={{
+            color: "#d7611f",
+            background: "#fff",
+            padding: 10,
+            borderRadius: "50%",
+          }}
+        />
+      </button>
     </form>
   );
 };

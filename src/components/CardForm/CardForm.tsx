@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import axios from "axios";
 import dayjs from "dayjs";
+import { ArrowDownOutlined } from "@ant-design/icons";
+
 import { useForm, SubmitHandler } from "react-hook-form";
 import StatusCodes from "http-status-codes";
 import { AppContext } from "../../context/AppContext";
@@ -37,13 +39,41 @@ export const CardForm = () => {
   };
   return (
     <form className="card__form" onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("name", { required: true })} />
-      {errors.name && <span>This field is required</span>}
-
-      <input {...register("phone", { required: true })} />
-      {errors.phone && <span>This field is required</span>}
-
-      <input type="submit" />
+      <h2 className="card__title">{eventData.name}</h2>
+      <div className="input__block">
+        <input
+          placeholder="Name"
+          {...register("name", { required: true })}
+          className={`card__input name ${errors.name ? "error__input" : ""}`}
+        />
+        {errors.name && (
+          <span className="error__text">This field is required</span>
+        )}
+      </div>
+      <div className="input__block">
+        <input
+          placeholder="Phone"
+          {...register("phone", { required: true })}
+          className={`card__input phone ${errors.phone ? "error__input" : ""}`}
+        />
+        {errors.phone && (
+          <span className="error__text">This field is required</span>
+        )}
+      </div>
+      <button
+        type="submit"
+        className={`card__submit btn ${errors.name && errors.phone ? "disabled__btn" : ""}`}
+      >
+        <span>Submit</span>
+        <ArrowDownOutlined
+          style={{
+            color: "#d7611f",
+            background: "#fff",
+            padding: 10,
+            borderRadius: "50%",
+          }}
+        />
+      </button>{" "}
     </form>
   );
 };

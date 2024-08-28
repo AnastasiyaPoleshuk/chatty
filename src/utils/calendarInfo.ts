@@ -15,7 +15,7 @@ export const calendarInfo: ICalendarInfo[] = [
   },
   {
     id: "2",
-    name: "English Party",
+    name: "English party",
     date: "2024-08-31",
     color: "rgba(31, 215, 138, 0.1)",
   },
@@ -33,7 +33,7 @@ export const calendarInfo: ICalendarInfo[] = [
   },
   {
     id: "5",
-    name: "English Party",
+    name: "English party",
     date: "2024-09-08",
     color: "rgba(31, 215, 138, 0.1)",
   },

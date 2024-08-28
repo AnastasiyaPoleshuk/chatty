@@ -3,6 +3,7 @@ import axios from "axios";
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import { StatusCodes } from "http-status-codes";
 import { Select } from "antd";
+import { ArrowDownOutlined } from "@ant-design/icons";
 
 import { error, success } from "../../components/Messages/Messages";
 import { CONSTANTS } from "../../utils/constants";
@@ -51,17 +52,27 @@ export const JoinTeamForm = () => {
 
   return (
     <form className="join-team__form" onSubmit={handleSubmit(onSubmit)}>
-      <input
-        placeholder="Your name"
-        {...register("name", { required: true })}
-      />
-      {errors.name && <span>This field is required</span>}
-
-      <input
-        placeholder="Your phone"
-        {...register("phone", { required: true })}
-      />
-      {errors.phone && <span>This field is required</span>}
+      <h2 className="join-team__title">Join team</h2>
+      <div className="input__block">
+        <input
+          placeholder="Name"
+          {...register("name", { required: true })}
+          className={`join-team__input name ${errors.name ? "error__input" : ""}`}
+        />
+        {errors.name && (
+          <span className="error__text">This field is required</span>
+        )}
+      </div>
+      <div className="input__block">
+        <input
+          placeholder="Phone"
+          {...register("phone", { required: true })}
+          className={`join-team__input phone ${errors.phone ? "error__input" : ""}`}
+        />
+        {errors.phone && (
+          <span className="error__text">This field is required</span>
+        )}
+      </div>
       <Controller
         control={control}
         name="eventName"
@@ -70,10 +81,30 @@ export const JoinTeamForm = () => {
             defaultValue={teamPositions[0]}
             onChange={(currentPosition) => onChange(currentPosition)}
             options={getOptions()}
+            style={{
+              border: "2px solid rgba(33, 33, 33, 0.5)",
+              padding: "10px 16px",
+              borderRadius: 10,
+              width: "100%",
+              background: "#fff",
+            }}
           />
         )}
       />
-      <input type="submit" />
+      <button
+        type="submit"
+        className={`join-team__submit btn ${errors.name && errors.phone ? "disabled__btn" : ""}`}
+      >
+        <span>Submit</span>
+        <ArrowDownOutlined
+          style={{
+            color: "#d7611f",
+            background: "#fff",
+            padding: 10,
+            borderRadius: "50%",
+          }}
+        />
+      </button>
     </form>
   );
 };

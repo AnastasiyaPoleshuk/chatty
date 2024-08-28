@@ -3,5 +3,64 @@
 .join-team__form {
   @include flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
+  width: 490px;
+  background: none;
+  position: relative;
+
+  .join-team__title {
+    @include h2;
+    color: $main-color-green;
+    margin-bottom: 12px;
+  }
+
+  .join-team__input {
+    width: 458px;
+    padding: 10px 16px;
+    border: 2px solid rgba(33, 33, 33, 0.5);
+    border-radius: 10px;
+
+    &::placeholder {
+      color: rgba(33, 33, 33, 0.5);
+    }
+  }
+
+  .error__input {
+    border: 2px solid red;
+  }
+
+  .join-team__submit {
+    border: none;
+    border-radius: 45px;
+    background: $main-color-orange;
+    padding: 10px 5px 10px 20px;
+    margin-top: 70px;
+    transition: 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      box-shadow: 5px 2px 10px #00000040;
+      cursor: pointer;
+    }
+
+    & span {
+      color: $main-color-white;
+      font-size: $button-font;
+      margin-right: 15px;
+    }
+  }
+
+  .disabled__btn {
+    background: rgba(220, 126, 39, 0.5);
+  }
+
+  .error__text {
+    font-size: $extra-small-font;
+    color: red;
+  }
+
+  .sign-up__form-date {
+    @include h3;
+    color: $main-color-green;
+  }
 }

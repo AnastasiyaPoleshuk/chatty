@@ -25,7 +25,7 @@ const getOptions = () => {
   return PriceCardInfo.map((event) => {
     return {
       value: event.title,
-      label: <span>{event.title}</span>,
+      label: <span className="select__option">{event.title}</span>,
     };
   });
 };
@@ -119,7 +119,9 @@ export const SignUpEventForm = () => {
           {...register("phone", { required: true })}
           className={`sign-up__input phone ${errors.phone ? "error__input" : ""}`}
         />
-        {errors.phone && <span>This field is required</span>}
+        {errors.phone && (
+          <span className="error__text">This field is required</span>
+        )}
       </div>
 
       <Controller
@@ -140,7 +142,9 @@ export const SignUpEventForm = () => {
           />
         )}
       />
-      {currentEventDate && <p>{`Date: ${currentEventDate}`}</p>}
+      {currentEventDate && (
+        <p className="sign-up__form-date">{`Date: ${currentEventDate}`}</p>
+      )}
       <button
         type="submit"
         disabled={isError}
