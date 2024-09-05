@@ -1,6 +1,6 @@
 export const CONSTANTS = {
   TG_REQUEST_URL:
-    "https://api.telegram.org/bot7329338195:AAGMhiQKnp1LIERDAEQT3oOSAG0zkk6pGrM/sendMessage?chat_id=1087069324",
+    "https://api.telegram.org/bot6703941810:AAFGoCsQN6Zp2t5QAw7Uii3WHfJFSUe5qws/sendMessage?chat_id=734527306",
   SECTIONS: {
     EVENTS: "events",
     ABOUT: "about",
