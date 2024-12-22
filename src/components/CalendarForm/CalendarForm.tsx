@@ -45,6 +45,7 @@ export const CalendarForm = () => {
         <input
           {...register("name", { required: true })}
           className={`calendar__input name ${errors.name ? "error__input" : ""}`}
+          placeholder="name"
         />
         {errors.name && (
           <span className="error__text">This field is required</span>
@@ -55,6 +56,7 @@ export const CalendarForm = () => {
         <input
           {...register("phone", { required: true })}
           className={`calendar__input phone ${errors.phone ? "error__input" : ""}`}
+          placeholder="phone"
         />
         {errors.phone && (
           <span className="error__text">This field is required</span>
@@ -68,8 +70,10 @@ export const CalendarForm = () => {
         <span>Submit</span>
         <ArrowDownOutlined
           style={{
-            color: "#d7611f",
-            background: "#fff",
+            color:
+              errors.name && errors.phone ? "rgb(206, 205, 204)" : "#d7611f",
+            background:
+              errors.name && errors.phone ? "rgb(99, 98, 98)" : "#fff",
             padding: 10,
             borderRadius: "50%",
           }}

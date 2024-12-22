@@ -4,7 +4,7 @@ import "./ThisIsUs.scss";
 export const ThisIsUs = () => {
   return (
     <div className="thisIsUs">
-      <h1>This page in development now.</h1>
+      <h1>This page is in development now.</h1>
       <NavLink to="/" className="btn">
         Home
       </NavLink>

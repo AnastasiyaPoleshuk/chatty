@@ -30,7 +30,7 @@ export const PriceCard = ({ card }: { card: IPriceCardInfo }) => {
         Duration: <span>{` ${card.duration} hour`}</span>
       </p>
       <p className="card__info-cost">
-        Cost: <span> {` ${card.cost} BYN`}</span>
+        Cost: <span> Donation</span>
       </p>
       <button className="card__btn" onClick={openForm}>
         Sign up

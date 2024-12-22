@@ -6,7 +6,7 @@ export const getUpcomingEvent = (
   eventType: string,
 ) => {
   const currentTypeEvents = eventsData.filter(
-    (item) => item.name === eventType,
+    (item) => item.type === eventType,
   );
   const futureEvents = currentTypeEvents.filter(
     (item) => +dayjs(item.date) > +dayjs(),

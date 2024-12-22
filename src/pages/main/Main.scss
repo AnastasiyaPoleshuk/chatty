@@ -5,10 +5,12 @@
   border-radius: 20px;
   border: 1px solid $main-color-purple;
   @include flex;
-  width: 950px !important;
   padding: 65px 0 !important;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  justify-content: center;
 
   &::before {
     display: block;
@@ -22,20 +24,6 @@
     position: absolute;
     right: -30px;
     bottom: -50px;
-  }
-
-  &::after {
-    display: block;
-    width: 400px;
-    height: 400px;
-    content: "";
-    background-image: url(../../assets/svg/modal-window-star-perple-filled.svg);
-    background-repeat: no-repeat;
-    background-size: 400px 400px;
-
-    position: absolute;
-    left: -207px;
-    top: -65px;
   }
 }
 

@@ -98,8 +98,10 @@ export const JoinTeamForm = () => {
         <span>Submit</span>
         <ArrowDownOutlined
           style={{
-            color: "#d7611f",
-            background: "#fff",
+            color:
+              errors.name && errors.phone ? "rgb(206, 205, 204)" : "#d7611f",
+            background:
+              errors.name && errors.phone ? "rgb(99, 98, 98)" : "#fff",
             padding: 10,
             borderRadius: "50%",
           }}

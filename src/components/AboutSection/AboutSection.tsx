@@ -37,7 +37,7 @@ export const AboutSection = () => {
           </h3>
           <p className="about__info-text">
             We are looking for a contect creator, a video-maker, and a project
-            manager to coordinate offline clubs in other cities
+            manager to coordinate offline clubs
           </p>
           <button
             className="about__info-button"

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { Calendar, message } from "antd";
+import { Calendar } from "antd";
 import locale from "antd/es/locale/en_US";
 import type { Dayjs } from "dayjs";
 import dayjs from "dayjs";

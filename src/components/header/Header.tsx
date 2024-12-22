@@ -30,7 +30,7 @@ export const Header = () => {
             href={`#${CONSTANTS.SECTIONS.PRICE}`}
             className="price__nav-item nav-item"
           >
-            Price
+            Pricing
           </a>
         </nav>
       </div>

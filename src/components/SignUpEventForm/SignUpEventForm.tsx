@@ -153,8 +153,8 @@ export const SignUpEventForm = () => {
         <span>Submit</span>
         <ArrowDownOutlined
           style={{
-            color: "#d7611f",
-            background: "#fff",
+            color: isError ? "rgb(206, 205, 204)" : "#d7611f",
+            background: isError ? "rgb(99, 98, 98)" : "#fff",
             padding: 10,
             borderRadius: "50%",
           }}

@@ -51,7 +51,17 @@
   }
 
   .disabled__btn {
-    background: rgba(220, 126, 39, 0.5);
+    background: rgb(206, 205, 204);
+    color: rgb(99, 98, 98);
+
+    &:hover {
+      box-shadow: none;
+      cursor: pointer;
+    }
+
+    & span {
+      color: rgb(145, 145, 145);
+    }
   }
 
   .error__text {
